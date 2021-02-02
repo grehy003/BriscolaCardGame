@@ -1,17 +1,19 @@
 #ifndef CARD_H
 #define CARD_H
 
-enum Suit {Swords, Clubs, Cups, Coins};
+#include <string>
+enum Suit {Swords = 0, Club = 1, Cups = 2, Coins = 3};
 
 
 class Card
 {
 public:
-    Card(int points, int value, Suit suit);
+    Card(int value, Suit suit);
     ~Card();
-    int _points;
+    std::string ToString();
     int _value;
     Suit _suit;
+
 };
 
 #endif // CARD_H
