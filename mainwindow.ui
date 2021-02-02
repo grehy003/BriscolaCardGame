@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>581</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="BriscolaSuit">
+        <property name="text">
+         <string>Briscola suit:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="CurrentSuit">
+        <property name="text">
+         <string>Cucumber</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="LabelBottomCard">
+        <property name="text">
+         <string>Bottom card:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="CurrentBottomCard">
+        <property name="text">
+         <string>Ace of Cucumber</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="LabelOpponentPlays">
+        <property name="text">
+         <string>Opponent plays</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="CurrentOpponentPile">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="CurrentOpponentPlay">
+        <property name="text">
+         <string>2 Swords</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="LabelOpponentPile">
+        <property name="text">
+         <string>Opponent pile:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="LabelYourPile">
+        <property name="text">
+         <string>Your pile</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="CurrentYourPile">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Your Hand</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="ButtonCard1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>7 Stars</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ButtonCard2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>4 Cucumber</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ButtonCard3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Horse Cucumber</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>581</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ButtonCard1</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentOpponentPlay</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>486</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>321</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard2</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentOpponentPlay</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>284</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard3</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentOpponentPlay</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>500</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard1</sender>
+   <signal>clicked()</signal>
+   <receiver>ButtonCard1</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>53</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard2</sender>
+   <signal>clicked()</signal>
+   <receiver>ButtonCard2</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>308</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>494</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard3</sender>
+   <signal>clicked()</signal>
+   <receiver>ButtonCard3</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>478</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard1</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentYourPile</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard1</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentOpponentPile</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard2</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentYourPile</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>482</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard2</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentOpponentPile</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard3</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentOpponentPile</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>480</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ButtonCard3</sender>
+   <signal>clicked()</signal>
+   <receiver>CurrentYourPile</receiver>
+   <slot>raise()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>410</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
