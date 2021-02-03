@@ -27,7 +27,7 @@
       <item row="0" column="1">
        <widget class="QLabel" name="CurrentSuit">
         <property name="text">
-         <string>Cucumber</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -41,7 +41,7 @@
       <item row="1" column="1">
        <widget class="QLabel" name="CurrentBottomCard">
         <property name="text">
-         <string>Ace of Cucumber</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -57,37 +57,37 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLabel" name="CurrentOpponentPile">
+       <widget class="QLabel" name="CurrentOpponentPoints">
         <property name="text">
-         <string>0</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
        <widget class="QLabel" name="CurrentOpponentPlay">
         <property name="text">
-         <string>2 Swords</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="LabelOpponentPile">
         <property name="text">
-         <string>Opponent pile:</string>
+         <string>Opponent points</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="LabelYourPile">
         <property name="text">
-         <string>Your pile</string>
+         <string>Your points</string>
         </property>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLabel" name="CurrentYourPile">
+       <widget class="QLabel" name="CurrentYourPoints">
         <property name="text">
-         <string>0</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -113,7 +113,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>7 Stars</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -126,7 +126,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>4 Cucumber</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -139,7 +139,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Horse Cucumber</string>
+           <string/>
           </property>
          </widget>
         </item>
@@ -262,7 +262,7 @@
   <connection>
    <sender>ButtonCard1</sender>
    <signal>clicked()</signal>
-   <receiver>CurrentYourPile</receiver>
+   <receiver>CurrentYourPoints</receiver>
    <slot>raise()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -278,7 +278,7 @@
   <connection>
    <sender>ButtonCard1</sender>
    <signal>clicked()</signal>
-   <receiver>CurrentOpponentPile</receiver>
+   <receiver>CurrentOpponentPoints</receiver>
    <slot>raise()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -294,7 +294,7 @@
   <connection>
    <sender>ButtonCard2</sender>
    <signal>clicked()</signal>
-   <receiver>CurrentYourPile</receiver>
+   <receiver>CurrentYourPoints</receiver>
    <slot>raise()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -310,7 +310,7 @@
   <connection>
    <sender>ButtonCard2</sender>
    <signal>clicked()</signal>
-   <receiver>CurrentOpponentPile</receiver>
+   <receiver>CurrentOpponentPoints</receiver>
    <slot>raise()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -326,7 +326,7 @@
   <connection>
    <sender>ButtonCard3</sender>
    <signal>clicked()</signal>
-   <receiver>CurrentOpponentPile</receiver>
+   <receiver>CurrentOpponentPoints</receiver>
    <slot>raise()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -342,7 +342,7 @@
   <connection>
    <sender>ButtonCard3</sender>
    <signal>clicked()</signal>
-   <receiver>CurrentYourPile</receiver>
+   <receiver>CurrentYourPoints</receiver>
    <slot>raise()</slot>
    <hints>
     <hint type="sourcelabel">
