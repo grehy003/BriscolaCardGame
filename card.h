@@ -2,6 +2,7 @@
 #define CARD_H
 
 #include <string>
+#include <QString>
 enum Suit {Swords = 0, Club = 1, Cups = 2, Coins = 3};
 
 
@@ -9,8 +10,12 @@ class Card
 {
 public:
     Card(int value, Suit suit);
+    Card(Card &card);
     ~Card();
-    std::string ToString();
+    const QString toString();
+    const QString suit();
+    int value();
+private:
     int _value;
     Suit _suit;
 

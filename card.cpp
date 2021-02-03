@@ -6,12 +6,31 @@ Card::Card(int value, Suit suit)
 
 }
 
+Card::Card(Card &card){
+    Card(card._value,card._suit);
+}
+
 Card::~Card(){
 
 }
 
-std::string Card::ToString(){
-    std::string cardDescription;
+const QString Card::suit(){
+    if(_suit == 0){
+        return "Swords";
+    }
+    else if(_suit == 1){
+        return "Club";
+    }
+    else if(_suit == 2){
+        return "Cups";
+    }
+    else {
+        return "Coins";
+    }
+}
+
+const QString Card::toString(){
+    QString cardDescription;
     if(_value == 0){
         cardDescription = "2";
     }

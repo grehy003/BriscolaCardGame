@@ -20,11 +20,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     card.cpp \
+    deck.cpp \
+    game.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     card.h \
+    deck.h \
+    game.h \
     mainwindow.h
 
 FORMS += \
