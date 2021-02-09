@@ -36,10 +36,17 @@ QString Deck::toString(){
     return deckString;
 }
 
-Card* Deck::popTopCard(){
-    return &_cards.front();
+Card Deck::popTopCard(){
+    Card c = Card(_cards.front());
+    _cards.erase(_cards.begin());
+    return c;
 }
 
 Card* Deck::popBottomCard(){
     return &_cards.back();
 }
+
+bool Deck::isEmpty(){
+    return _cards.empty();
+}
+
