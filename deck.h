@@ -11,9 +11,10 @@ public:
     Deck();
     ~Deck();
     void shuffle();
-    Card* popTopCard();
+    Card popTopCard();
     Card* popBottomCard();
     QString toString();
+    bool isEmpty();
 private:
     std::vector<Card> _cards;
 };
