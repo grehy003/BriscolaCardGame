@@ -16,16 +16,14 @@ int main(int argc, char *argv[])
     QLabel* ui_CurrentSuit = w.findChild<QLabel*>("CurrentSuit");
     QLabel* ui_CurrentBottomCard = w.findChild<QLabel*>("CurrentBottomCard");
     QLabel* ui_CurrentOpponentPlay = w.findChild<QLabel*>("CurrentOpponentPlay");
-    QLabel* ui_CurrentOpponentPile = w.findChild<QLabel*>("CurrentOpponentPile");
-    QLabel* ui_CurrentYourPile = w.findChild<QLabel*>("CurrentYourPile");
+    QLabel* ui_CurrentOpponentPoints = w.findChild<QLabel*>("CurrentOpponentPoints");
+    QLabel* ui_CurrentYourPoints = w.findChild<QLabel*>("CurrentYourPoints");
     QPushButton* ui_ButtonCard1 = w.findChild<QPushButton*>("ButtonCard1");
     QPushButton* ui_ButtonCard2 = w.findChild<QPushButton*>("ButtonCard2");
     QPushButton* ui_ButtonCard3 = w.findChild<QPushButton*>("ButtonCard3");
 
     Game game;
     game.initialize();
-        Deck* deck = new Deck;
-        deck->shuffle();
 
     ui_CurrentBottomCard->setText(game.getBottomCard());
     ui_CurrentSuit->setText(game.getBottomCardSuit());
