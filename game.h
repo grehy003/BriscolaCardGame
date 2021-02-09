@@ -4,22 +4,30 @@
 #include <deck.h>
 #include <vector>
 #include <QString>
+#include <player.h>
+
 class Game
 {
 public:
     Game();
     ~Game();
+    void play();
     void initialize();
     std::vector<Card> playerHand();
     QString getBottomCard();
     QString getBottomCardSuit();
-    void setHands();
-    void playCard(Card card);
-    void pickUpCard();
+    void pickUpCard(Player* player);
+    void determineFirstPlay();
+    void determineHandWinner(Card playerCard, Card AICard);
+    void determineWinner();
+    bool cardsSameSuit(Card playerCard, Card AICard);
 private:
+    bool playerWonLastHand;
     Deck* _deck;
-    std::vector<Card> _playerHand;
-    std::vector<Card> _AIHand;
+    Player* _player;
+    Player* _AI;
+    int _playerScore;
+    int _AIScore;
 };
 
 #endif // GAME_H
