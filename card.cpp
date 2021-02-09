@@ -7,7 +7,7 @@ Card::Card(int value, Suit suit)
 }
 
 Card::Card(Card &card){
-    Card(card._value,card._suit);
+    Card(card._value, card._suit);
 }
 
 Card::~Card(){
@@ -65,12 +65,10 @@ const QString Card::toString(){
 
     if(_suit == 0){
         cardDescription += "Swords";
-    }
-
+    } 
     if(_suit == 1){
         cardDescription += "Clubs";
     }
-
     if(_suit == 2){
         cardDescription += "Cups";
     }
