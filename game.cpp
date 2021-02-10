@@ -52,17 +52,29 @@ void Game::play()
 
 void Game::determineHandWinner(Card playerCard, Card AICard)
 {
-    //Check if either cards are brisc
-    if(playerCard.suit() == getBottomCardSuit()
-            || AICard.suit() == getBottomCardSuit()){
-        if(cardsSameSuit(playerCard, AICard)){
-            if(playerCard.value() > AICard.value()){
-
-            }
-            //AI win
+    if(cardsSameSuit(playerCard, AICard)){
+        if(playerCard.value() > AICard.value()){
+            //Player win
         }
-        //brisc wins
+        //AI win
     }
+    else if(isCardBrisc(playerCard)){
+        //Player win
+    }
+    else if(isCardBrisc(AICard)){
+        //AI win
+    }
+    else{
+        if(playerCard.value() > AICard.value()){
+            //Player win
+        }
+        //AI win
+    }
+}
+
+bool Game::isCardBrisc(Card card)
+{
+    return card.suit() == getBottomCardSuit();
 }
 
 bool Game::cardsSameSuit(Card playerCard, Card AICard)

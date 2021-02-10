@@ -21,6 +21,7 @@ public:
     void determineHandWinner(Card playerCard, Card AICard);
     void determineWinner();
     bool cardsSameSuit(Card playerCard, Card AICard);
+    bool isCardBrisc(Card card);
 private:
     bool playerWonLastHand;
     Deck* _deck;
