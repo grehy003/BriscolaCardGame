@@ -1,4 +1,8 @@
 #include "game.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
+#include "iostream"
 
 Game::Game()
 {
@@ -25,15 +29,19 @@ void Game::play()
 {
     initialize();
     determineFirstPlay();
-
+    bool firstTurn = true;
     //Game loop
     while(!_deck->isEmpty()){
         while(!_player->hasFullHand()){
             pickUpCard(_player);
             pickUpCard(_AI);
         }
+        if(firstTurn){
+            flipACoin();
+            firstTurn = false;
+        }
         //Human goes first
-        if(playerWonLastHand){
+        if(playerWonLastHand){ //TODO roll for first to play at start
             Card playerCard = _player->playCard();
             Card AICard = _AI->playCard();
             determineHandWinner(playerCard,AICard);
@@ -54,21 +62,21 @@ void Game::determineHandWinner(Card playerCard, Card AICard)
 {
     if(cardsSameSuit(playerCard, AICard)){
         if(playerCard.value() > AICard.value()){
-            //Player win
+            _player->addScore(playerCard.points() + AICard.points());
         }
-        //AI win
+        _AI->addScore(playerCard.points() + AICard.points());
     }
     else if(isCardBrisc(playerCard)){
-        //Player win
+        _player->addScore(playerCard.points() + AICard.points());
     }
     else if(isCardBrisc(AICard)){
-        //AI win
+        _AI->addScore(playerCard.points() + AICard.points());
     }
     else{
         if(playerCard.value() > AICard.value()){
-            //Player win
+            _player->addScore(playerCard.points() + AICard.points());
         }
-        //AI win
+        _AI->addScore(playerCard.points() + AICard.points());
     }
 }
 
@@ -82,7 +90,32 @@ bool Game::cardsSameSuit(Card playerCard, Card AICard)
     return playerCard.suit() == AICard.suit();
 }
 
+void Game::flipACoin()
+{
+    int randomNum;
+    srand(time(NULL));
+    randomNum = rand() % 1;
+    if(randomNum == 0){
+        std::cout << randomNum  << " rolled"<< std::endl;
+    }
+    else if(randomNum == 1) {
+        std::cout << randomNum  << " rolled"<< std::endl;
+    }
+    else{
+        std::cout << randomNum  << " Other"<< std::endl;
+
+    }
+}
+
 void Game::determineWinner()
 {
-
+    if(_player->points() > _AI->points()){
+        //Player wins
+    }
+    else if(_player->points() < _AI->points()){
+        //AI wins
+    }
+    else{
+        //Draw
+    }
 }
