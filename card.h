@@ -15,6 +15,7 @@ public:
     const QString toString();
     const QString suit();
     int value();
+    int points();
 private:
     int _value;
     Suit _suit;
