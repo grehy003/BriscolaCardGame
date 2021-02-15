@@ -16,9 +16,9 @@ void TestClass::initTestCase()
 
 void TestClass::shuffleReorganisesCardsTest()
 {
-    Deck deck;
-    Deck deckShuffled;
-    deckShuffled.shuffle();
+//    Deck deck;
+//    Deck deckShuffled;
+//    deckShuffled.shuffle();
 
     //QVERIFY(deck.popBottomCard()->toString() != deckShuffled.popBottomCard()->toString());
 }

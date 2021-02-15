@@ -22,7 +22,7 @@ void Deck::shuffle(){
     srand((unsigned) time(0));
     for(int i = 0; i < 200; i++){
         int random = rand() % 39;
-        Card c = _cards.at(random);
+        Card c(_cards.at(random));
         _cards.erase(_cards.begin() + random);
         _cards.push_back(c);
     }
