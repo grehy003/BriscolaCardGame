@@ -10,7 +10,6 @@ class Card
 {
 public:
     Card(int value, Suit suit);
-    Card(Card &card);
     ~Card();
     const QString toString();
     const QString suit();

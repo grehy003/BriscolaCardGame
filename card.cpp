@@ -6,9 +6,7 @@ Card::Card(int value, Suit suit)
 
 }
 
-Card::Card(Card &card){
-    Card(card._value, card._suit);
-}
+
 
 Card::~Card(){
 
@@ -98,4 +96,9 @@ const QString Card::toString(){
         cardDescription += "Coins";
     }
     return cardDescription;
+}
+
+int Card::value()
+{
+    return _value;
 }
