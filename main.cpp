@@ -27,10 +27,9 @@ int main(int argc, char *argv[])
 
     ui_CurrentBottomCard->setText(game.getBottomCard());
     ui_CurrentSuit->setText(game.getBottomCardSuit());
-    game.setHands();
-    ui_ButtonCard1->setText(game.playerHand().at(0).toString());
-    ui_ButtonCard2->setText(game.playerHand().at(1).toString());
-    ui_ButtonCard3->setText(game.playerHand().at(2).toString());
+//    ui_ButtonCard1->setText(game.playerHand().at(0).toString());
+//    ui_ButtonCard2->setText(game.playerHand().at(1).toString());
+//    ui_ButtonCard3->setText(game.playerHand().at(2).toString());
 
     //Game loop
 
@@ -40,7 +39,6 @@ int main(int argc, char *argv[])
 
 
 
-    delete deck;
 
 
     //Game start here

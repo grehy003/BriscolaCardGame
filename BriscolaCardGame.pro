@@ -19,7 +19,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Tests/testclass.cpp \
     card.cpp \
     deck.cpp \
     game.cpp \
@@ -28,7 +27,6 @@ SOURCES += \
     player.cpp
 
 HEADERS += \
-    Tests/testclass.h \
     card.h \
     deck.h \
     game.h \

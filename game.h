@@ -13,7 +13,6 @@ public:
     ~Game();
     void play();
     void initialize();
-    std::vector<Card> playerHand();
     QString getBottomCard();
     QString getBottomCardSuit();
     void pickUpCard(Player* player);
@@ -21,6 +20,8 @@ public:
     void determineHandWinner(Card playerCard, Card AICard);
     void determineWinner();
     bool cardsSameSuit(Card playerCard, Card AICard);
+    bool isCardBrisc(Card card);
+    void flipACoin();
 private:
     bool playerWonLastHand;
     Deck* _deck;

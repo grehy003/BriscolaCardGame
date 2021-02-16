@@ -10,11 +10,11 @@ class Card
 {
 public:
     Card(int value, Suit suit);
-    Card(Card &card);
     ~Card();
     const QString toString();
     const QString suit();
     int value();
+    int points();
 private:
     int _value;
     Suit _suit;

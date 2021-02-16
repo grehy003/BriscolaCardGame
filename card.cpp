@@ -6,12 +6,31 @@ Card::Card(int value, Suit suit)
 
 }
 
-Card::Card(Card &card){
-    Card(card._value, card._suit);
-}
+
 
 Card::~Card(){
 
+}
+
+//Coverts card value to points based on Briscola rules
+int Card::points()
+{
+    if(value() == 9){ //Ace
+        return 11;
+    }
+    if(value() == 8){ //Three
+        return 10;
+    }
+    if(value() == 8){ //King
+        return 4;
+    }
+    if(value() == 6){ //Queen
+        return 3;
+    }
+    if(value() == 5){ //Jack
+        return 2;
+    }
+    return 0;
 }
 
 const QString Card::suit(){
@@ -77,4 +96,9 @@ const QString Card::toString(){
         cardDescription += "Coins";
     }
     return cardDescription;
+}
+
+int Card::value()
+{
+    return _value;
 }
