@@ -13,7 +13,6 @@ public:
     ~Game();
     void play();
     void initialize();
-    std::vector<Card> playerHand();
     QString getBottomCard();
     QString getBottomCardSuit();
     void pickUpCard(Player* player);

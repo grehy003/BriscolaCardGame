@@ -14,17 +14,6 @@ Game::~Game()
     delete _deck;
 }
 
-void Game::initialize()
-{
-    _deck = new Deck;
-    _deck->shuffle();
-}
-
-void Game::pickUpCard(Player* player)
-{
-    player->pickUpCard(_deck->popTopCard());
-}
-
 void Game::play()
 {
     initialize();
@@ -57,6 +46,31 @@ void Game::play()
     determineWinner();
 }
 
+void Game::initialize()
+{
+    _deck = new Deck;
+    _deck->shuffle();
+}
+
+QString Game::getBottomCard()
+{
+    return _deck->popBottomCard()->toString();
+}
+
+QString Game::getBottomCardSuit()
+{
+    return _deck->popBottomCard()->suit();
+}
+
+void Game::pickUpCard(Player* player)
+{
+    player->pickUpCard(_deck->popTopCard());
+}
+
+void Game::determineFirstPlay()
+{
+
+}
 
 void Game::determineHandWinner(Card playerCard, Card AICard)
 {
